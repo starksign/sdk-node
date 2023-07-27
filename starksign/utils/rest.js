@@ -120,7 +120,7 @@ exports.postSubResource = async function (resource, id, subResource, options, us
     let response = await fetch(`/${path}`, 'POST', payload, null, user);
     let json = response.json();
     let returnEntity = json[api.lastName(subResourceEndpoint)];
-    return Object.assign(new subResource['class'], returnEntity);
+    return Object.assign(new subResource['class'](returnEntity), returnEntity);
 }
 
 
