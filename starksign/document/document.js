@@ -6,7 +6,9 @@ const Resource = require('../utils/resource').Resource;
 const rest = require('../utils/rest.js');
 const parseObjects = require('../utils/parse.js').parseObjects;
 const signerSubresource = require('./signer/signer.js').subResource;
+const { Signer } = require('./signer/signer.js');
 const signatureSubresource = require('./signature/signature.js').subResource;
+const { Signature } = require('./signature/signature.js')
 
 class Document extends Resource {
     /**
