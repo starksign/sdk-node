@@ -1,6 +1,6 @@
 {
   "name": "starksign",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "SDK to facilitate Node integrations with Stark Sign",
   "main": "starksign/index.js",
   "directories": {
