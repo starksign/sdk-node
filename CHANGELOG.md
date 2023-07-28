@@ -12,6 +12,10 @@ Given a version number MAJOR.MINOR.PATCH, increment:
 - PATCH version when backwards compatible bug **fixes** are implemented.
 
 ## [Unreleased]
+### Fix
+- imports errors
+
+## [0.0.1] - 2023-07-28
 ### Added
 - SignatureRequest resource with parse() method
 - Document resource with get() and sign() methods

@@ -1,7 +1,7 @@
 const starksign = require('../index');
 const Ellipticcurve = require('starkbank-ecdsa');
 const rest = require('../utils/rest.js');
-const error = require('../../node_modules/starkbank/sdk/error.js');
+const error = require('../error.js');
 const api = require('./api');
 
 
