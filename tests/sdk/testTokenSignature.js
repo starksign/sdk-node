@@ -24,5 +24,7 @@ describe('TestTokenSignature', function(){
             token: token
         })
         console.log(signature)
+        
+        assert(typeof signature.signerId == 'string')
     })
 })

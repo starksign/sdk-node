@@ -14,8 +14,8 @@ class Signer extends Resource {
     * @param status [string]: Signer status. ex: "pending", "success" or "canceled"
     * @param documentId [string]: ID of the Document that should be signed. ex: "6785678567856785"
     * @param tags [list of strings, default []]: list of strings for reference when searching for the Signer. ex: tags=["always-on-time"]
-    * @param created [datetime.datetime]: creation datetime of the Signer. ex: datetime.datetime(2020, 3, 10, 10, 30, 0, 0)
-    * @param updated [datetime.datetime]: latest update datetime for the Signer. ex: datetime.datetime(2020, 3, 10, 10, 30, 0, 0)
+    * @param created [string]: creation datetime of the Signer. ex: '2020-03-10 10:30:00.000'
+    * @param updated [string]: latest update datetime for the Signer. ex: '2020-03-10 10:30:00.000'
     */
 
     constructor({name = null, contact = null, method = null, isSent = null, status = null, documentId = null, tags = null, created = null, updated = null})

@@ -72,7 +72,10 @@ exports.sign = async function ({id, content, signerId, privateKey, token} = {}) 
         privateKey = PrivateKey.fromPem(privateKey)
     }
     if (privateKey == null){
-        privateKey = new PrivateKey(EcdsaCurve.secp256k1, BigInt("0x" + Array.from(Uint8Array.from(Buffer.from(sha256.sha256(`${id}:${signerId}:${token}`).toString(), 'hex'))).map(byte => byte.toString(16).padStart(2, '0')).join('')))
+        privateKey = new PrivateKey(
+            EcdsaCurve.secp256k1, 
+            BigInt("0x" + Array.from(Uint8Array.from(Buffer.from(sha256.sha256(`${id}:${signerId}:${token}`).toString(), 'hex'))).map(byte => byte.toString(16).padStart(2, '0')).join(''))
+        )
     }
     return rest.postSubResource(exports.resource, id, signatureSubresource, {"signerId": signerId, "signature": Ecdsa.sign(content, privateKey).toBase64()})
 }

@@ -1,6 +1,3 @@
-
-
-
 class StarkSignError extends Error {
     constructor(message) {
         super(message);

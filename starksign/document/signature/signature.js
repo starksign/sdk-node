@@ -1,5 +1,4 @@
 const SubResource = require('../../utils/subResource').SubResource;
-const check = require('../../utils/check.js');
 
 class Signature extends SubResource {
     /**
@@ -14,7 +13,7 @@ class Signature extends SubResource {
     * @param signature [string]: base-64 ECDSA digital signature generated to sign the document. ex: "MEUCIQD6cymQq40/06XuIelkv2t9qd9rPACooRH8faCB8SuPIQIgOqIil/1Vm/jni8eTDsoO5ytdoDitZocm3KSLzUYHCrQ\u003d"
     * @param publicKey [string]: public key that was used to validate the signature against the HTML content of the document. ex: "-----BEGIN PUBLIC KEY-----\nMFYwEAYHKoZIzj0CAQYFK4EEAAoDQgAEgHEBU5JNNgoJ1pWNUaEM7PvRbDvvNw3W\n+rZPqVhor/2vEqB5+fpYjTQp3EdGlKtEtSizeHsL9Vwm5MSt3CQrzA\u003d\u003d\n-----END PUBLIC KEY-----"
     * @param ip [string]: IP that sent the signature to Stark Infra. ex: "2804:14c:6a:85d3:b8a3:ddb4:a4e9:e11e"
-    * @param created [datetime.datetime]: creation datetime for the Signature. ex: datetime.datetime(2020, 3, 10, 10, 30, 0, 0)
+    * @param created [string]: creation datetime for the Signature. ex: '2020-03-10 10:30:00.000'
     */
 
     constructor(signerId = null, name = null, contact = null, signature = null, publicKey = null, ip = null, created = null){
