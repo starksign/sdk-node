@@ -12,6 +12,8 @@ Given a version number MAJOR.MINOR.PATCH, increment:
 - PATCH version when backwards compatible bug **fixes** are implemented.
 
 ## [Unreleased]
+
+## [0.0.3] - 2023-08-07
 ### Fixed
 - missing "starksign" folder in the final package
 
