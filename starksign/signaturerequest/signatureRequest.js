@@ -1,5 +1,7 @@
-const SubResource = require('../utils/subResource').SubResource;
-const parseObjects = require('../utils/parse.js').parseAndVerify;
+const SubResource = require('core-node').SubResource;
+const parseObjects = require('core-node').parse;
+const starksign = require('../../index.js');
+let user = require('core-node').PublicUser;
 
 
 class SignatureRequest extends SubResource {
@@ -30,22 +32,22 @@ exports.resource = {"class": exports.SignatureRequest, "name": "SignatureRequest
 
 exports.parse = async function ({content, signature}) {
     /**
-    * Create a single verified SignatureRequest object from a content string
-    * 
-    * @description Create a single SignatureRequest object from a content string received from a handler listening at the request url.
-    * If the provided digital signature does not check out with the StarkSign public key, a
-    * starksign.error.InvalidSignatureError will be raised.
-    * 
-    * Parameters (required):
-    * @param content [string]: response content from request received at user endpoint (not parsed)
-    * @param signature [string]: base-64 digital signature received at response header "Digital-Signature"
-    * 
-    * Parameters (optional):
-    * @param user [Organization/Project object, default None]: Organization or Project object. Not necessary if starksign.user was set before function call.
-    * 
-    * Return:
-    * @return Parsed SignatureRequest object
+     * Create a single verified SignatureRequest object from a content string
+     * 
+     * @description Create a single SignatureRequest object from a content string received from a handler listening at the request url.
+     * If the provided digital signature does not check out with the StarkSign public key, a
+     * starksign.error.InvalidSignatureError will be raised.
+     * 
+     * Parameters (required):
+     * @param content [string]: response content from request received at user endpoint (not parsed)
+     * @param signature [string]: base-64 digital signature received at response header "Digital-Signature"
+     * 
+     * Parameters (optional):
+     * @param user [Organization/Project object, default None]: Organization or Project object. Not necessary if starksign.user was set before function call.
+     * 
+     * Return:
+     * @return Parsed SignatureRequest object
     */
-
-    return parseObjects(exports.resource, content, signature)
+    user = new user({environment: starksign.environment}); 
+    return parseObjects.parseAndVerify(exports.resource, content, signature, null, null, "sign", user)
 }

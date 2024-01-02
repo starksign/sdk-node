@@ -24,6 +24,6 @@ exports.getLanguage = function () {
     return exports.language
 }
 
-// Modoles
-exports.document = require('./document')
-exports.signatureRequest = require('./signaturerequest')
+// Modules
+exports.document = require('./starksign/document')
+exports.signatureRequest = require('./starksign/signaturerequest')

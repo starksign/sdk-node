@@ -1,10 +1,10 @@
 const sha256 = require("js-sha256");
-const Ecdsa = require('starkbank-ecdsa').Ecdsa;
-const PrivateKey = require('starkbank-ecdsa').PrivateKey;
-const EcdsaCurve = require("starkbank-ecdsa/ellipticcurve/curve");
-const Resource = require('../utils/resource').Resource;
 const rest = require('../utils/rest.js');
-const parseObjects = require('../utils/parse.js').parseObjects;
+const Ecdsa = require('starkbank-ecdsa').Ecdsa;
+const Resource = require('core-node').Resource;
+const PrivateKey = require('starkbank-ecdsa').PrivateKey;
+const parseObjects = require('core-node').parseObjects;
+const EcdsaCurve = require("starkbank-ecdsa/ellipticcurve/curve");
 const signerSubresource = require('./signer/signer.js').subResource;
 const { Signer } = require('./signer/signer.js');
 const signatureSubresource = require('./signature/signature.js').subResource;
