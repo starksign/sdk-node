@@ -1,5 +1,5 @@
 const assert = require("assert");
-const starksign = require("../../starksign/index");
+const starksign = require("../../index");
 
 
 starksign.environment = "sandbox"
