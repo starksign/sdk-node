@@ -1,4 +1,4 @@
-const Resource = require('core-node').Resource;
+const Resource = require('starkcore').Resource;
 
 
 class Signer extends Resource {

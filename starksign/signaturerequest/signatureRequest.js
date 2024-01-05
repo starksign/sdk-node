@@ -1,7 +1,7 @@
-const SubResource = require('core-node').SubResource;
-const parseObjects = require('core-node').parse;
+const SubResource = require('starkcore').SubResource;
+const parseObjects = require('starkcore').parse;
 const starksign = require('../../index.js');
-let user = require('core-node').PublicUser;
+let user = require('starkcore').PublicUser;
 
 
 class SignatureRequest extends SubResource {
