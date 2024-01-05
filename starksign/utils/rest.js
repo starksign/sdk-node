@@ -2,11 +2,11 @@ const timeout = 2000
 const apiVersion = 'v2'
 const language = 'en-US'
 const sdkVersion = '2.13.0'
-const starkHost = require('core-node').starkHost;
+const starkHost = require('starkcore').starkHost;
 const host = starkHost.sign
-const rest = require('core-node').rest;
+const rest = require('starkcore').rest;
 const starksign = require('../../index.js');
-let user = require('core-node').PublicUser;
+let user = require('starkcore').PublicUser;
 
 
 exports.getId = async function (resource, id, { ...query } = {}) {
