@@ -7,7 +7,7 @@ starksign.environment = "sandbox"
 
 describe('TestTokenSignature', function(){
     this.timeout(20000);
-    it('test-success', async () => {
+    it('test-token-signature', async () => {
 
         let token = "EaYSQiZe"
         let document = await starksign.document.get("00e49e95f1ef486d9407418fee88e153")

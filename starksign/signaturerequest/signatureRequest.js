@@ -1,6 +1,7 @@
 const SubResource = require('starkcore').SubResource;
 const parseObjects = require('starkcore').parse;
 const starksign = require('../../index.js');
+const { sdkVersion, apiVersion } = require('../utils/rest.js');
 let user = require('starkcore').PublicUser;
 
 
@@ -49,5 +50,5 @@ exports.parse = async function ({content, signature}) {
      * @return Parsed SignatureRequest object
     */
     user = new user({environment: starksign.environment}); 
-    return parseObjects.parseAndVerify(exports.resource, content, signature, null, null, "sign", user)
+    return parseObjects.parseAndVerify(exports.resource, content, signature, sdkVersion, apiVersion, "sign", user)
 }
