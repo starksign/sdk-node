@@ -5,12 +5,13 @@ const sdkVersion = '2.13.0'
 const starkHost = require('starkcore').starkHost;
 const host = starkHost.sign
 const rest = require('starkcore').rest;
+const { PublicUser } = require('starkcore');
 const starksign = require('../../index.js');
 let user = require('starkcore').PublicUser;
 
 
 exports.getId = async function (resource, id, { ...query } = {}) {
-    user = new user({environment: starksign.environment});
+    user = new PublicUser({environment: starksign.environment});
     return rest.getId(
         sdkVersion,
         host,
@@ -25,7 +26,7 @@ exports.getId = async function (resource, id, { ...query } = {}) {
 };
 
 exports.postSubResource = async function (resource, id, subResource, payload) {
-    user = new user({environment: starksign.environment});
+    user = new PublicUser({environment: starksign.environment});
     return rest.postSubResource(
         sdkVersion,
         host,
