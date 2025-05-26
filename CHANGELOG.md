@@ -12,6 +12,8 @@ Given a version number MAJOR.MINOR.PATCH, increment:
 - PATCH version when backwards compatible bug **fixes** are implemented.
 
 ## [Unreleased]
+
+## [0.1.1] - 2025-05-26
 ### Removed
 - bigint-buffer dependency
 ### Fixed
