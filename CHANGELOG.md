@@ -12,6 +12,8 @@ Given a version number MAJOR.MINOR.PATCH, increment:
 - PATCH version when backwards compatible bug **fixes** are implemented.
 
 ## [Unreleased]
+### Fixed
+- signatureRequest.parse() failing with "user is not a constructor" on every call after the first one in the same process
 
 ## [0.1.1] - 2025-05-26
 ### Removed
